@@ -417,11 +417,11 @@ function initCollectionDetailPage() {
 
   // Show/hide loading indicator functions
   function showLoader() {
-    $("#fullPageLoader").removeClass("d-none");
+    $("#fullPageLoader").removeClass("d-none").addClass("d-flex");
   }
 
   function hideLoader() {
-    $("#fullPageLoader").addClass("d-none");
+    $("#fullPageLoader").removeClass("d-flex").addClass("d-none");
   }
 
   // Add item button click handler

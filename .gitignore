@@ -37,3 +37,4 @@ tmp/
 temp/
 e2e/test-results/
 playwright-report/
+test-results/

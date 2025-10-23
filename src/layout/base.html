@@ -209,13 +209,16 @@
       .form-control::-ms-input-placeholder {
         color: #808080 !important;
       }
+      #fullPageLoader.d-none {
+        pointer-events: none !important;
+      }
     </style>
   </head>
   <body>
     <!-- Full page loading overlay -->
     <div
       id="fullPageLoader"
-      class="d-none"
+      class="d-none justify-content-center align-items-center"
       style="
         position: fixed;
         top: 0;
@@ -224,9 +227,6 @@
         height: 100%;
         background: rgba(0, 0, 0, 0.7);
         z-index: 9999;
-        display: flex;
-        justify-content: center;
-        align-items: center;
       "
     >
       <div class="text-center">
