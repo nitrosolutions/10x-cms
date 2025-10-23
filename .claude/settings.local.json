@@ -2,13 +2,10 @@
   "permissions": {
     "allow": [
       "Bash(mkdir:*)",
-      "Bash(del \"c:\\Users\\Admin\\Desktop\\10xdevs\\10x-cms\\e2e\\auth.setup.ts\")",
-      "Bash(del \"c:\\Users\\Admin\\Desktop\\10xdevs\\10x-cms\\e2e\\authentication.noauth.spec.ts\")",
-      "Bash(del \"c:\\Users\\Admin\\Desktop\\10xdevs\\10x-cms\\e2e\\collection.auth.spec.ts\")",
-      "Bash(npm run test:e2e:*)",
+      "Bash(npm:*)",
       "Bash(curl:*)",
       "Bash(pkill:*)",
-      "Bash(git restore:*)"
+      "Bash(git:*)"
     ],
     "deny": [],
     "ask": []
