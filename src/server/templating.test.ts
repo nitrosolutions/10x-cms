@@ -1,4 +1,5 @@
 var expect = require("chai").expect;
+// @ts-ignore
 var path = require("path");
 var templating = require("./templating");
 

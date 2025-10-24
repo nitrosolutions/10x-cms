@@ -1,4 +1,5 @@
 var fs = require("fs");
+// @ts-ignore
 var path = require("path");
 
 function readFileSync(filepath) {
@@ -118,6 +119,7 @@ function renderPage(pageName, req, customVariables) {
 
   var meta = parseMetaTags(content);
   var variables = {
+    // @ts-expect-error TS(2339): Property 'title' does not exist on type '{}'.
     title: meta.title || "10xCMS",
     currentYear: new Date().getFullYear(),
     // Add authentication status if request object is provided
@@ -138,7 +140,9 @@ function renderPage(pageName, req, customVariables) {
     })
     .join("\n");
 
+  // @ts-expect-error TS(2339): Property 'layout' does not exist on type '{}'.
   if (meta.layout) {
+    // @ts-expect-error TS(2339): Property 'layout' does not exist on type '{}'.
     content = renderWithLayout(content, meta.layout, variables);
   }
 

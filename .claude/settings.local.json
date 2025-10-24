@@ -3,9 +3,12 @@
     "allow": [
       "Bash(mkdir:*)",
       "Bash(npm:*)",
+      "Bash(npx:*)",
       "Bash(curl:*)",
       "Bash(pkill:*)",
-      "Bash(git:*)"
+      "Bash(git:*)",
+      "Bash(npx tsc:*)",
+      "Bash(cat:*)"
     ],
     "deny": [],
     "ask": []

@@ -27,6 +27,7 @@ export class LoginPage extends BasePage {
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
           body: `username=${encodeURIComponent(user)}&password=${encodeURIComponent(pass)}`
         }).then(() => {
+          // @ts-expect-error TS(2304): Cannot find name 'window'.
           window.location.href = '/home';
         });
       }, [username, password])

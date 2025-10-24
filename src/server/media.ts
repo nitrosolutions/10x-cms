@@ -1,4 +1,5 @@
 var fs = require("fs");
+// @ts-expect-error TS(2451): Cannot redeclare block-scoped variable 'path'.
 var path = require("path");
 
 // Base directory for media storage

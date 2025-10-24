@@ -26,6 +26,7 @@ export abstract class BasePage {
   async waitForPageToBeReady(): Promise<void> {
     // Wait for the page loader to have the 'd-none' class (indicating it's hidden)
     await this.page.waitForFunction(() => {
+      // @ts-expect-error TS(2584): Cannot find name 'document'. Do you need to change... Remove this comment to see the full error message
       const loader = document.getElementById('fullPageLoader');
       return loader?.classList.contains('d-none');
     });

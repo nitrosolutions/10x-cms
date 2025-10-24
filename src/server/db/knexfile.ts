@@ -1,3 +1,4 @@
+// @ts-ignore block-scoped variable 'path'.
 const path = require("path");
 
 module.exports = {
@@ -8,6 +9,7 @@ module.exports = {
     },
     migrations: {
       directory: path.join(__dirname, "migrations"),
+      extension: ["js", "ts"],
     },
     seeds: {
       directory: path.join(__dirname, "seeds"),
@@ -27,6 +29,7 @@ module.exports = {
     },
     migrations: {
       directory: path.join(__dirname, "migrations"),
+      extension: ["js", "ts"],
     },
     seeds: {
       directory: path.join(__dirname, "seeds"),
@@ -41,6 +44,7 @@ module.exports = {
     },
     migrations: {
       directory: path.join(__dirname, "migrations"),
+      extension: ["js", "ts"],
     },
     seeds: {
       directory: path.join(__dirname, "seeds"),

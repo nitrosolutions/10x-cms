@@ -85,7 +85,7 @@ function requireAuth(req, res, next) {
   next();
 }
 
-function renderPage(req, res) {
+var renderHtmlPage = (req, res) => {
   var pageName = req.path === "/" ? "home" : req.path.substring(1);
   var content = templating.renderPage(pageName, req);
 
@@ -94,7 +94,7 @@ function renderPage(req, res) {
   }
 
   res.send(content);
-}
+};
 
 app.get("/webhooks", requireAuth, async function (req, res) {
   try {
@@ -572,7 +572,7 @@ app.get("/login", function (req, res) {
   if (req.cookies.auth) {
     return res.redirect("/home");
   }
-  renderPage(req, res);
+  renderHtmlPage(req, res);
 });
 
 app.post("/login", function (req, res) {
@@ -605,8 +605,8 @@ app.get("/logout", function (req, res) {
 });
 
 // Protected routes
-app.get("/", requireAuth, renderPage);
-app.get("/home", requireAuth, renderPage);
+app.get("/", requireAuth, renderHtmlPage);
+app.get("/home", requireAuth, renderHtmlPage);
 
 // Media Library routes
 app.get("/media", requireAuth, function (req, res) {
